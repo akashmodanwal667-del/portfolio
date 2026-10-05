@@ -16,8 +16,8 @@ function Hero() {
             <a href="#projects" className="btn btn-primary">
               See my projects
             </a>
-            <a href="#contact" className="btn btn-outline">
-              Contact me
+            <a href="tel:+911234567890" className="btn btn-outline">
+              +91 1234567890
             </a>
           </div>
         </div>
