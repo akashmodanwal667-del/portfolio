@@ -1,18 +1,19 @@
-/* ===== NAVBAR — fixed bar at the top ===== */
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+
   background: rgba(251, 252, 254, 0.92);
   backdrop-filter: blur(8px);
+
   border-bottom: 1px solid var(--border);
 }
 
 .navbar-inner {
   height: 68px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,6 +23,7 @@
   font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 800;
+
   color: var(--ink);
   letter-spacing: -0.02em;
 }
@@ -29,11 +31,16 @@
 .navbar-links {
   display: flex;
   gap: 30px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-links a {
   color: var(--ink);
   font-weight: 500;
+
   padding: 6px 0;
   border-bottom: 2px solid transparent;
 }
@@ -44,32 +51,128 @@
 
 .navbar-toggle {
   display: none;
+
   background: none;
   border: 1.5px solid var(--border);
   border-radius: 8px;
+
   width: 42px;
   height: 42px;
+
   font-size: 1.3rem;
   cursor: pointer;
+
   color: var(--ink);
 }
 
-/* ---------- Mobile ---------- */
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 50px;
+}
+
+.about-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-text {
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   ABOUT INFORMATION BOX
+========================================= */
+
+.about-facts {
+  width: 350px;
+
+  margin: 0;
+  padding: 25px;
+
+  list-style: none;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+}
+
+.about-facts li {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.about-facts li:first-child {
+  padding-top: 0;
+}
+
+.about-facts li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fact-label {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.about-facts a {
+  color: #0645d6;
+  text-decoration: none;
+
+  word-break: break-word;
+}
+
+.about-facts a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 800px) {
+
   .navbar-toggle {
     display: block;
   }
 
   .navbar-links {
     display: none;
+
     position: absolute;
+
     top: 68px;
     left: 0;
     right: 0;
+
     flex-direction: column;
     gap: 0;
+
     background: var(--white);
+
     border-bottom: 1px solid var(--border);
+
     padding: 8px 20px 16px;
   }
 
@@ -80,5 +183,17 @@
   .navbar-links a {
     display: block;
     padding: 12px 0;
+  }
+
+
+  /* About Mobile */
+
+  .about-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-facts {
+    width: 100%;
   }
 }
