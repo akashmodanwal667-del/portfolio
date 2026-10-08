@@ -1,33 +1,29 @@
 import "./Hero.css";
 
-function Hero() {
+function Hero({profile}) {
   return (
     <section className="hero" id="home">
       <div className="container hero-inner">
         <div className="hero-text">
           <p className="hero-greeting">Hi, I'm</p>
-          <h1 className="hero-name">Akash Modanwal</h1>
-          <h2 className="hero-title">MERN Stack Developer</h2>
-          <p className="hero-tagline">
-            I build simple, fast web apps with React and Node.js — and I'm
-            looking for my first role as a full-stack developer.
-          </p>
+          <h1 className="hero-name">{profile.name}</h1>
+          <h2 className="hero-title">{profile.title}</h2>
+          <p className="hero-tagline">{profile.tagline}</p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">
               See my projects
             </a>
-            <a href="tel:+911234567890" className="btn btn-outline">
-              +91 1234567890
+            <a href="tel:+91 8858878097" className="btn btn-outline">
+              +91 8858878097
             </a>
           </div>
         </div>
 
         <div className="hero-photo">
-          <img src="/profile.jpg" alt="Akash Modanwal" />
+          <img src={profile.photo} alt={profile.name} />
         </div>
       </div>
     </section>
   );
 }
-
 export default Hero;

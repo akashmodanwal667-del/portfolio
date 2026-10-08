@@ -11,7 +11,8 @@
   font-size: 1.1rem;
   max-width: 60ch;
   margin: 8px 0 28px;
-  white-space: pre-line; /* keeps line breaks typed in the admin panel */
+  white-space: pre-line;
+  /* keeps line breaks typed in the admin panel */
 }
 
 .about-facts {

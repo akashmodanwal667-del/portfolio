@@ -34,7 +34,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px; /* so the fixed navbar doesn't hide section titles */
+  scroll-padding-top: 72px;
+  /* so the fixed navbar doesn't hide section titles */
 }
 
 body {
@@ -229,6 +230,7 @@ ul {
   html {
     scroll-behavior: auto;
   }
+
   * {
     transition: none !important;
     animation: none !important;

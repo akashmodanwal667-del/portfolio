@@ -3,7 +3,7 @@
 // We use "_id" because MongoDB gives every item an _id.
 
 export const profile = {
-  name: "Aman Verma",
+  name: "Akash Modanwal",
   title: "MERN Stack Developer",
   tagline:
     "I build simple, fast web apps with React and Node.js — " +
